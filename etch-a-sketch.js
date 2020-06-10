@@ -23,6 +23,9 @@ ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.lineWidth = MOVE_AMOUNT;
 
+let hue = 0;
+ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+
 ctx.beginPath();//start the drawing
 ctx.moveTo(x, y);
 ctx.lineTo(x, y);
@@ -33,6 +36,9 @@ ctx.stroke();
 //write a draw function
 
 function draw({key}) {
+    //increment the hue
+    hue += 10;
+    ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
     console.log(key);
 // start the path
     ctx.beginPath();
