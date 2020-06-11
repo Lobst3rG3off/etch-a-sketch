@@ -21,7 +21,7 @@ let y = Math.floor(Math.random() * height);
 
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
-ctx.lineWidth = MOVE_AMOUNT;
+ctx.lineWidth = 20;
 
 let hue = 0;
 ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
